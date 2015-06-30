@@ -1,0 +1,38 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {B413CFE2-F3DF-4456-8FF4-8A7936E6B691} = s 'SourceSafe Shell'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}
+
+HKLM
+{
+  NoRemove SOFTWARE
+  {
+    NoRemove Microsoft
+    {
+      NoRemove Windows
+      {
+        NoRemove CurrentVersion
+        {
+          NoRemove Explorer
+          {
+            NoRemove ShellIconOverlayIdentifiers
+            {
+              ForceRemove {B413CFE2-F3DF-4456-8FF4-8A7936E6B691} = s '{B413CFE2-F3DF-4456-8FF4-8A7936E6B691}'
+              {
+              }           
+            }
+          }
+        }
+      }
+    }
+  }
+}

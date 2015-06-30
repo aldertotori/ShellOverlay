@@ -1,0 +1,138 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {4D028AB2-C832-4EB7-9D18-808DA64FF7B2} = s 'SourceSafeShell'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove *
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove Folder
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove Drive
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove Directory
+	{
+		NoRemove Background
+		{
+			NoRemove shellex
+			{
+				NoRemove ContextMenuHandlers
+				{
+					ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+				}
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove Directory
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove lnkfile
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+			}
+		}
+	}
+}
+
+HKCR
+{
+	NoRemove InternetShortcut
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove SourceSafeShell = s '{4D028AB2-C832-4EB7-9D18-808DA64FF7B2}'
+			}
+		}
+	}
+}
+
+HKLM
+{
+	NoRemove SOFTWARE
+	{
+		NoRemove Microsoft
+		{	
+			NoRemove Windows
+			{
+				NoRemove CurrentVersion
+				{
+					NoRemove 'Shell Extensions'
+					{
+						NoRemove Approved
+						{
+							val {4D028AB2-C832-4EB7-9D18-808DA64FF7B2} = s 'Shell extensions for SourceSafe'
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

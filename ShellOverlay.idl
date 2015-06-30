@@ -1,0 +1,181 @@
+// ShellOverlay.idl : IDL source for ShellOverlay.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ShellOverlay.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+// 	[
+// 		object,
+// 		uuid(9760ABEB-EA81-4089-BC84-D2BDFCE8AED6),
+// 		dual,
+// 		helpstring("IAddedOverlay Interface"),
+// 		pointer_default(unique)
+// 	]
+// 	interface IAddedOverlay : IDispatch
+// 	{
+// 	};
+// 	
+	[
+		object,
+		uuid(0632A410-1931-4D77-B216-CDABC991E4C1),
+		dual,
+		helpstring("IConflictOverlay Interface"),
+		pointer_default(unique)
+	]
+	interface IConflictOverlay : IDispatch
+	{
+	};
+	
+	[
+		object,
+		uuid(6E5781EC-E78F-498D-81F0-3912B34157D6),
+		dual,
+		helpstring("IModifiedOverlay Interface"),
+		pointer_default(unique)
+	]
+	interface IModifiedOverlay : IDispatch
+	{
+	};
+	
+	[
+		object,
+		uuid(ECC336D7-637B-4F29-AB94-4B96DBE4C575),
+		dual,
+		helpstring("IIgonredOverlay Interface"),
+		pointer_default(unique)
+	]
+	interface IIgonredOverlay : IDispatch
+	{
+	};
+	
+	[
+		object,
+		uuid(39B3D604-1D04-48AA-B772-F554017B763A),
+		dual,
+		helpstring("IUnversionedOverlay Interface"),
+		pointer_default(unique)
+	]
+	interface IUnversionedOverlay : IDispatch
+	{
+	};
+	
+	[
+		object,
+		uuid(37A27E8A-6D00-4234-BF9C-B4AAE8722962),
+		dual,
+		helpstring("ILockedOverlay Interface"),
+		pointer_default(unique)
+	]
+	interface ILockedOverlay : IDispatch
+	{
+	};
+	
+// 	[
+// 		object,
+// 		uuid(CE2BDD54-229B-4738-8F16-DE25AF5E4D5C),
+// 		dual,
+// 		helpstring("IDeletedOverlay Interface"),
+// 		pointer_default(unique)
+// 	]
+// 	interface IDeletedOverlay : IDispatch
+// 	{
+// 	};
+// 	
+	[
+		object,
+		uuid(143EDD86-3035-48B5-A3B7-0E43BA2EB9C9),
+		dual,
+		helpstring("IShellContextMenu Interface"),
+		pointer_default(unique)
+	]
+	interface IShellContextMenu : IDispatch
+	{
+	};
+	
+[
+	uuid(4A918609-C23E-4B26-8D37-57AA8D51A967),
+	version(1.0),
+	helpstring("ShellOverlay 1.0 Type Library")
+]
+library SHELLOVERLAYLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+// 	[
+// 		uuid(D57011B7-9D62-4C95-8BED-F014CD710995),
+// 		helpstring("AddedOverlay Class")
+// 	]
+// 	coclass AddedOverlay
+// 	{
+// 		[default] interface IAddedOverlay;
+// 	};
+// 	
+	[
+		uuid(E1B54096-34DB-463C-B65F-5C9C1566D6B6),
+		helpstring("ConflictOverlay Class")
+	]
+	coclass ConflictOverlay
+	{
+		[default] interface IConflictOverlay;
+	};
+	
+	[
+		uuid(F869C1EF-B5E6-4B1F-9B0D-AFB69310823C),
+		helpstring("ModifiedOverlay Class")
+	]
+	coclass ModifiedOverlay
+	{
+		[default] interface IModifiedOverlay;
+	};
+	
+	[
+		uuid(CE28A651-67AF-409A-9A42-4CFC479FCBE9),
+		helpstring("IgonredOverlay Class")
+	]
+	coclass IgonredOverlay
+	{
+		[default] interface IIgonredOverlay;
+	};
+	
+	[
+		uuid(B413CFE2-F3DF-4456-8FF4-8A7936E6B691),
+		helpstring("UnversionedOverlay Class")
+	]
+	coclass UnversionedOverlay
+	{
+		[default] interface IUnversionedOverlay;
+	};
+	
+	[
+		uuid(13203C45-FC5B-4F9D-B851-4AB096BF56B3),
+		helpstring("LockedOverlay Class")
+	]
+	coclass LockedOverlay
+	{
+		[default] interface ILockedOverlay;
+	};
+	
+// 	[
+// 		uuid(61B18D9D-BB23-4BC1-B26C-7DD6877BD23D),
+// 		helpstring("DeletedOverlay Class")
+// 	]
+// 	coclass DeletedOverlay
+// 	{
+// 		[default] interface IDeletedOverlay;
+// 	};
+// 	
+	
+	[
+		uuid(4D028AB2-C832-4EB7-9D18-808DA64FF7B2),
+		helpstring("ShellContextMenu Class")
+	]
+	coclass ShellContextMenu
+	{
+		[default] interface IShellContextMenu;
+	};
+};
